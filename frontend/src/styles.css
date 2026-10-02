@@ -1,0 +1,14 @@
+html{
+    scroll-behavior:smooth
+}
+body{
+    margin:0;
+    background:#f7f4ee;
+    color:#18332f
+}
+a{
+    color:inherit
+}
+*{
+    box-sizing:border-box
+}
