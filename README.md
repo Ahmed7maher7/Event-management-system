@@ -1,6 +1,6 @@
-# Eventoo — Event Management System
+# Eventoo | Event Management System
 
-A full-stack Event Management System built for the Node.js + Express + Mongoose final individual project.
+A full-stack Event Management System built for the Node.js + Express + Mongoose .
 
 
 ### Backend
