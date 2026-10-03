@@ -1,9 +1,8 @@
 # Eventoo | Event Management System
 
-A full-stack Event Management System built for the Node.js + Express + Mongoose .
+A full-stack Event Management System built for the Node.js + Express + Mongoose.
 
-
-### Backend
+## Backend
 
 * Node.js
 * Express.js
@@ -13,7 +12,7 @@ A full-stack Event Management System built for the Node.js + Express + Mongoose 
 * bcrypt password hashing
 * express-validator
 
-### Frontend
+## Frontend
 
 * React
 * Vite
@@ -37,7 +36,6 @@ A full-stack Event Management System built for the Node.js + Express + Mongoose 
 * Postman collection included
 * Main API endpoints documented and tested in Postman
 
-
 ## Requirements Before Running
 
 Make sure you have:
@@ -48,13 +46,12 @@ Make sure you have:
 
 MongoDB Compass is **not** the database itself. The application connects to MongoDB through Mongoose.
 
-
 ### Demo Account
 
-
+```text
 Email: maher@test.com
 Password: 123456
-
+```
 
 ## Run Backend
 
@@ -67,10 +64,11 @@ npm install
 
 Create a `.env` file based on `.env.example`:
 
+```text
 PORT=3000
 MONGO_URI=mongodb://127.0.0.1:27017/event_management
 JWT_SECRET=change_this_secret
-
+```
 
 Then start the backend:
 
@@ -80,11 +78,11 @@ npm run dev
 
 Expected output:
 
-
+```text
 Connected to mongodb
 Default categories added
 Server running at http://localhost:3000
-
+```
 
 Default categories and demo data are inserted automatically when the database is empty.
 
@@ -108,15 +106,15 @@ http://localhost:5173
 
 To inspect the database using MongoDB Compass, connect to:
 
-
+```text
 mongodb://127.0.0.1:27017
-
+```
 
 Then open:
 
-
+```text
 event_management
-
+```
 
 The database contains the following collections:
 
@@ -127,9 +125,9 @@ The database contains the following collections:
 
 ## API Base URL
 
-
+```text
 http://localhost:3000/api
-
+```
 
 ## Authentication
 
@@ -137,53 +135,53 @@ Register or login to receive a JWT token.
 
 Protected requests use:
 
-
+```text
 Authorization: Bearer YOUR_TOKEN
-
+```
 
 ## Main Endpoints
 
 ### Auth
 
-
+```text
 POST /api/auth/register
 POST /api/auth/login
 GET  /api/auth/me
-
+```
 
 ### Categories
 
-
+```text
 GET    /api/categories
 POST   /api/categories
 DELETE /api/categories/:id
-
+```
 
 ### Events
 
-
+```text
 GET    /api/events
 GET    /api/events/:id
 GET    /api/events/mine
 POST   /api/events
 PUT    /api/events/:id
 DELETE /api/events/:id
-
+```
 
 Filtering and pagination example:
 
-
+```text
 GET /api/events?search=workshop&category=CATEGORY_ID&page=1&limit=6
-
+```
 
 ### Registrations
 
-
+```text
 GET    /api/registrations/mine
 POST   /api/registrations/events/:id
 DELETE /api/registrations/events/:id
 GET    /api/registrations/events/:id
-
+```
 
 ## Business Rules
 
@@ -201,7 +199,9 @@ GET    /api/registrations/events/:id
 
 The project includes a Postman collection:
 
+```text
 Event Management System API.postman_collection
+```
 
 The main API flows and validation cases were tested, including:
 
@@ -219,11 +219,11 @@ The main API flows and validation cases were tested, including:
 * Input validation
 * Past event date validation
 
-
 ## Project Structure
 
 ```text
 Event-management-system/
+
 │
 ├── backend/
 │   ├── config/
@@ -250,4 +250,3 @@ Event-management-system/
 │
 └── README.md
 ```
-
